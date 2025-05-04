@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+  }
+  
+  .header {
+    padding: 20px 40px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 200px;
+  }
+  
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 18px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .gold {
+    background-color: #c1a052;
+    color: white;
+  }
+  
+  .beige {
+    background-color: #e5dac3;
+    color: #5a4a2f;
+  }
+  
+  .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fef8f4;
+    border-radius: 30px;
+    padding: 5px 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    width: 200px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #b4975a;
+  }
+  
+  .search-bar i {
+    font-size: 18px;
+    color: #b4975a;
+    margin-left: 10px;
+  }
+  
+  .main-nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #9d7c2c;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .main {
+    display: flex;
+    padding: 40px;
+    background: linear-gradient(to right, #ffffff 55%, #f2ccb6 45%);
+  }
+
+  nav a {
+    color: #8B6914; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin: 0 15px; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+}
+
+nav a:hover {
+    color: #8B6914; 
+}
+  
+  .left-side {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .related-title {
+    color: #b4975a;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #b4975a;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  .service-card {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .service-card img {
+    width: 100%;
+    border-radius: 20px;
+    border: 5px solid pink;
+  }
+  
+  .service-card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .description {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .service-item {
+    width: 90%; 
+    max-width: 300px; 
+    text-align: center;
+  }
+  
+  .service-item img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .service-item button {
+    margin-top: 10px;
+    background-color: white;
+    border: 2px solid #b4975a;
+    color: #b4975a;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .login-box {
+    background-color: #d9c9a3;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .login-box h2 {
+    color: #7d653b;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .login-box input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #fef9f4;
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+  }
+  
+  .login-box input:focus{
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px #d2b48c;
+  }
+  
+  .full-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .signup-text {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  
+  .signup-text a {
+    color: #7d653b;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d4af37; /* customize as needed */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #bfa134;
+  }
+  
+  footer {
+    background-color: #e5dac3;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #7d653b;
+  }
+  

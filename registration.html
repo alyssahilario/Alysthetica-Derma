@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alysthetica Derma</title>
+  <link rel="stylesheet" href="registration.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <div class="header-top">
+    <div class="logo">
+      <img src="Alysthetica-Logo.png" alt="Alysthetica Derma Logo" />
+    </div>
+    <div class="header-right">
+      <div class="header-buttons">
+        <a href="login.html"><button>Tele-Consult</button></a>
+        <a href="login.html"><button>Enquire</button></a>
+        <a href="login.html"><button>Book</button></a>
+      </div>      
+      <div class="nav-links">
+        <nav>
+          <a href="login.html">ABOUT</a>
+          <a href="homepage.html">SERVICES</a>
+          <a href="homepage.html">ARTICLES</a>
+          <a href="homepage.html">PACKAGES</a>
+          <a href="homepage.html">CLINICS</a>
+          <a href="homepage.html">DOCTORS</a>
+          <a href="login.html">CONTACT</a>
+        </nav>
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="form-box">
+    <h2>REGISTRATION FORM</h2>
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First name<span>*</span></label>
+          <input type="text" required />
+        </div>
+        <div class="form-group">
+          <label>Last name<span>*</span></label>
+          <input type="text" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email Address<span>*</span></label>
+          <input type="email" required />
+        </div>
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Contact number<span>*</span></label>
+          <input type="text" required />
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="gender-buttons">
+            <button type="button">F</button>
+            <button type="button">M</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-row single-column">
+        <div class="form-group">
+          <label>Password<span>*</span></label>
+          <input type="password" required />
+        </div>
+      </div>
+      <div class="form-row single-column">
+        <div class="form-group">
+          <label>Confirm Password<span>*</span></label>
+          <input type="password" required />
+        </div>
+      </div>      
+      <button type="submit" class="submit-btn">REGISTER</button>
+    </form>
+  </div>
+</div>
+
+<script src="registration.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alysthetica Derma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="addtocart.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo">
+        <img src="Alysthetica-Logo.png" alt="Alysthetica Derma Logo">
+      </div>
+      <div class="nav-buttons">
+        <button class="btn tele">Tele-Consult</button>
+        <button class="btn enquire">Enquire</button>
+        <button class="btn book">Book</button>
+        <div class="search-bar">
+          <input type="text" placeholder="Search">
+          <i class="fas fa-search"></i>
+      </div>
+      
+             
+      </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <div class="nav-bar">
+      <a href="#">ABOUT</a>
+      <a href="#">SERVICES</a>
+      <a href="#">ARTICLES</a>
+      <a href="#">PACKAGES</a>
+      <a href="#">CLINICS</a>
+      <a href="#">DOCTORS</a>
+      <a href="#">CONTACT</a>
+    </div>
+    <div class="underline"></div>
+
+    <!-- MAIN CONTENT -->
+    <h2>ADD YOUR SERVICE</h2>
+    <div class="cart-summary">
+      Total items added to cart: <strong id="item-count">0</strong>
+    </div>
+    <div class="pink-box" id="drop-area"></div>
+    <div class="cart-total">
+      Total Amount: ₱<strong id="total-amount">0</strong>
+    </div>
+
+    <!-- RELATED SERVICES -->
+    <div class="related-section">
+      <h4>Related Services</h4>
+      <div class="tags">
+        <span draggable="true">Plastic Surgery ₱170000</span>
+        <span draggable="true">Cosmetic Surgery ₱20000</span>
+        <span draggable="true">Microneedling ₱3000</span>
+        <span draggable="true">Botox and Fillers ₱21000</span>
+        <span draggable="true">Face Treatment ₱1700</span>
+        <span draggable="true">Laser Treatment ₱1800</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const tags = document.querySelectorAll('.tags span');
+    const dropArea = document.getElementById('drop-area');
+    const itemCount = document.getElementById('item-count');
+    const totalAmount = document.getElementById('total-amount');
+
+    let totalItems = 0;
+    let totalPrice = 0;
+
+    const servicePrices = {
+      "Plastic Surgery": 170000,
+      "Cosmetic Surgery": 20000,
+      "Microneedling": 3000,
+      "Botox and Fillers": 21000,
+      "Face Treatment": 1700,
+      "Laser Treatment": 1800
+    };
+
+    tags.forEach(tag => {
+      tag.addEventListener('dragstart', e => {
+        const service = tag.textContent.split('₱')[0].trim();
+        e.dataTransfer.setData('text/plain', service);
+      });
+    });
+
+    dropArea.addEventListener('dragover', e => {
+      e.preventDefault();
+    });
+
+    dropArea.addEventListener('drop', e => {
+      e.preventDefault();
+      const service = e.dataTransfer.getData('text/plain');
+      if (!servicePrices[service]) return;
+
+      const existing = Array.from(dropArea.children).some(el => el.dataset.service === service);
+      if (existing) return;
+
+      const tagDiv = document.createElement('div');
+      tagDiv.className = 'dropped-tag';
+      tagDiv.dataset.service = service;
+      tagDiv.innerHTML = `${service} ₱${servicePrices[service].toLocaleString()} <button class="remove-btn">Remove</button>`;
+      dropArea.appendChild(tagDiv);
+
+      totalItems++;
+      totalPrice += servicePrices[service];
+      itemCount.textContent = totalItems;
+      totalAmount.textContent = totalPrice.toLocaleString();
+
+      tagDiv.querySelector('.remove-btn').addEventListener('click', () => {
+        dropArea.removeChild(tagDiv);
+        totalItems--;
+        totalPrice -= servicePrices[service];
+        itemCount.textContent = totalItems;
+        totalAmount.textContent = totalPrice.toLocaleString();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #a97c1f;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .header-right {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+    margin-top: 20px;
+}
+
+.header-right a button {
+    padding: 10px 18px;
+    background-color: #b4975a;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.header-right a button:hover {
+    background-color: #9d7c2c;
+}
+
+  
+  .logo img {
+    height: 220px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .nav-buttons .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn.tele {
+    background-color: #d3c8a3;
+  }
+  
+  .btn.enquire {
+    background-color: #cfc3a1;
+  }
+  
+  .btn.book {
+    background-color: #b88c2b;
+  }
+  
+  .search-box {
+    position: relative;
+    background-color: #f8ddcd;
+    border-radius: 40px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    width: 260px;
+  }
+  
+  .search-box input {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: #caa65c;
+    outline: none;
+    padding: 12px 0;
+  }
+  
+  .search-box input::placeholder {
+    color: #caa65c;
+    font-weight: 600;
+  }
+  
+  .search-icon {
+    font-size: 18px;
+    color: #caa65c;
+    margin-left: 8px;
+  }
+  
+  .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fce4ec;
+    border-radius: 30px;
+    padding: 6px 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar input {
+    padding: 10px 40px 10px 16px;
+    border: none;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #b4975a;
+    font-size: 14px;
+    width: 180px;
+    outline: none;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 16px;
+    color: #b4975a;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+  
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .nav-bar a {
+    text-decoration: none;
+    color: #a97c1f;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .underline {
+    width: 150px;
+    border-top: 2px solid #a97c1f;
+    margin: 5px auto 20px auto;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0 10px;
+    color: #a97c1f;
+  }
+  
+  .cart-summary,
+  .cart-total {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    color: #a97c1f;
+  }
+  
+  .pink-box {
+    background-color: #fcc9d2;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px 0 20px;
+    overflow-y: auto;
+    min-height: 100px;
+  }
+  
+  .dropped-tag {
+    background-color: #fff;
+    color: #a97c1f;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+  
+  .remove-btn {
+    background-color: #a97c1f;
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .related-section h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #a97c1f;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tags span {
+    background-color: #fcc9d2;
+    color: #a97c1f;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: grab;
+  }
+  
+  .tags span:hover {
+    background-color: #f5aeb6;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+  }
+  
