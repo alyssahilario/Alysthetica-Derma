@@ -12,11 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
   
       if (enteredFirstName === registeredFirstName && enteredPassword === registeredPassword) {
         alert("Login Successful!");
+          window.location.href = "addtocart.html";
       } else {
         alert("Invalid username or password. Please try again.");
       }
-
-   /* I did not include the Sign up function for this Login Page */
 
     });
   });
